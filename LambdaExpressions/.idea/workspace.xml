@@ -80,37 +80,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="ProjectUPDATE" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="465" y="322" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1580992280995">
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1593435462617">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="465" y="322" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1580992280995" />
-    <state x="262" y="52" key="CommitChangelistDialog2" timestamp="1580992294396">
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1593435462617" />
+    <state x="97" y="72" key="new project wizard" timestamp="1593435676475">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="262" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580992294396" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1580992330770">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580992330770" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1580992330767">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580992330767" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1580992330611">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580992330611" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1580992330769">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580992330769" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1580992303548">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1580992303548" />
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1580991986010">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1580991986010" />
+    <state x="97" y="72" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1593435676475" />
   </component>
 </project>
