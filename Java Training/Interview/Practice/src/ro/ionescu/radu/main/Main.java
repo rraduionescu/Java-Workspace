@@ -17,6 +17,7 @@ public class Main
 			String lengthString = bufferedReader.readLine();
 			int length = Integer.parseInt(lengthString);
 
+			// Fibonacci series recursive
 			long startTime = System.nanoTime();
 			System.out.println("\nFibonacci stream recursive: ");
 			for(int count = 1 ; count <= length ; count++)
@@ -26,6 +27,7 @@ public class Main
 			long elapsedTime = System.nanoTime() - startTime;
 			System.out.println("\nElapsed time recursive: " + elapsedTime + " ns");
 
+			// Fibonacci series iterative
 			startTime = System.nanoTime();
 			System.out.println();
 			System.out.println("Fibonacci stream iterative: ");
@@ -36,6 +38,7 @@ public class Main
 			elapsedTime = System.nanoTime() - startTime;
 			System.out.println("\nElapsed time iterative: " + elapsedTime + " ns");
 
+			// Testing prime numbers
 			for(int i = 0 ; i < 5 ; i++)
 			{
 				System.out.print("\nInput number to be tested: ");
@@ -51,6 +54,7 @@ public class Main
 				}
 			}
 
+			// Prime number series
 			System.out.print("\nInput prime stream length: ");
 			String lengthPrimeString = bufferedReader.readLine();
 			int lengthPrime = Integer.parseInt(lengthPrimeString);
