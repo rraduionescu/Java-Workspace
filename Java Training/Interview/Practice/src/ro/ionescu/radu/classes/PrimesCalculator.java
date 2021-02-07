@@ -8,7 +8,7 @@ public class PrimesCalculator
 		int c = 0;
 		for(int i = 2 ; i < 20 * length ; i++)
 		{
-			if(verify(i))
+			if(check(i))
 			{
 				numbers[c] = i;
 				c++;
@@ -21,10 +21,13 @@ public class PrimesCalculator
 		return numbers;
 	}
 
-	public static boolean verify(long number)
+	public static boolean check(long number)
 	{
-		int step = 1;
-		for(int i = 2 ; i <= Math.sqrt(number) ; i += step)
+		if(number != 2 && number % 2 == 0)
+		{
+			return false;
+		}
+		for(int i = 3 ; i <= Math.sqrt(number) ; i += 2)
 		{
 			if(number % i == 0)
 			{
