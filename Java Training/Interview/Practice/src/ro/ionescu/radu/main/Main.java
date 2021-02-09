@@ -5,6 +5,7 @@ import ro.ionescu.radu.classes.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Date;
 
 public class Main
 {
@@ -19,7 +20,7 @@ public class Main
 
 			// 1. Fibonacci series recursive
 			long startTime = System.nanoTime();
-			System.out.println("\nFibonacci series recursive: ");
+			System.out.println("Fibonacci series recursive: ");
 			for(int count = 1 ; count <= length ; count++)
 			{
 				System.out.print(FibonacciCalculator.calculateRecursive(count) + " ");
@@ -29,7 +30,6 @@ public class Main
 
 			// 1. Fibonacci series iterative
 			startTime = System.nanoTime();
-			System.out.println();
 			System.out.println("Fibonacci series iterative: ");
 			for(int count = 1 ; count <= length ; count++)
 			{
@@ -117,6 +117,28 @@ public class Main
 			integer = bufferedReader.readLine();
 			int factorial = Integer.parseInt(integer);
 			System.out.println(factorial + "! = " + FactorialCalculator.calculateIterative(factorial));
+
+			// 7. Reverse an array
+			int[] nums = {5, 1, 6, 8, 2, 4, 7, 5, 2, 1};
+			System.out.println("\nNormal array  : " + Arrays.toString(nums));
+			System.out.println("Reversed array: " + Arrays.toString(ArrayCalculator.reverse(nums)));
+
+			// 8. Sort array
+			System.out.println("Sorted array  : " + Arrays.toString(ArrayCalculator.sort(nums)));
+
+			// 9. Remove array duplicates
+			System.out.println("No duplicates : " + Arrays.toString(ArrayCalculator.removeDuplicates(nums)));
+
+			//10. Print JAVA pattern
+			System.out.println("\n   J    A  V     V  A    ");
+			System.out.println("   J   A A  V   V  A A   ");
+			System.out.println("J  J  AAAAA  V V  AAAAA  ");
+			System.out.println(" JJ  A  A  A  V  A     A ");
+
+			//11.Date
+			Date date = new Date();
+			System.out.println();
+			System.out.println(date.toString());
 
 			// T. The single unpaired number in a vector in O(n)
 			int[] pairs = {1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 7, 6, 5, 4, 3, 2, 1};
