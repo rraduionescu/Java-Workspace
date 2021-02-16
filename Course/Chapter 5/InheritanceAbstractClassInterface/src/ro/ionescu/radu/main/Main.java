@@ -24,5 +24,6 @@ public class Main
 		{
 			((Instructor)persons[1]).teach();
 		}
+		instructor.present(5);
 	}
 }

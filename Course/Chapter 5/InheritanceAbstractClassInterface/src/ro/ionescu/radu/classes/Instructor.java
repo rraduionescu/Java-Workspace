@@ -6,4 +6,14 @@ public class Instructor extends Person
 	{
 		System.out.println("Instructor " + name + " is teaching a lesson.");
 	}
+
+	public void present()
+	{
+		System.out.println("Hi, i'm instructor " + name + "!");
+	}
+	public void present(int hours)
+	{
+		present();
+		System.out.println("This course will take " + hours + " hours!");
+	}
 }
