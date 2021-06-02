@@ -1,28 +1,25 @@
 package ro.ionescu.radu;
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.IntStream;
+
 import static java.util.stream.Collectors.toList;
-
-
 
 class Result
 {
-	public static List<Integer> starsAndBars(String s, List<Integer> startIndex, List<Integer> endIndex)
+	public static List<Integer> starsAndBars(String inputString, List<Integer> startIndex, List<Integer> endIndex)
 	{
 		ArrayList<Integer> result = new ArrayList<>();
-		for(int i =0 ;i< startIndex.size();i++)
+		for(int i = 0 ; i < startIndex.size() ; i++)
 		{
-			String partial = s.substring(startIndex.get(i)-1,endIndex.get(i));
-			int firstBar=-1;
-			first : for(int j =0 ; j<partial.length();j++)
+			String partial  = inputString.substring(startIndex.get(i) - 1, endIndex.get(i));
+			int    firstBar = -1;
+			first:
+			for(int j = 0 ; j < partial.length() ; j++)
 			{
 				if(partial.charAt(j) == '|')
 				{
@@ -30,8 +27,9 @@ class Result
 					break first;
 				}
 			}
-			int lastBar =-1;
-			last : for(int j = partial.length()-1;j>=0;j--)
+			int lastBar = -1;
+			last:
+			for(int j = partial.length() - 1 ; j >= 0 ; j--)
 			{
 				if(partial.charAt(j) == '|')
 				{
@@ -45,8 +43,8 @@ class Result
 			}
 			else
 			{
-				int stars =0;
-				for(int j=firstBar+1;j<lastBar;j++)
+				int stars = 0;
+				for(int j = firstBar + 1 ; j < lastBar ; j++)
 				{
 					if(partial.charAt(j) == '*')
 					{
@@ -65,16 +63,17 @@ public class Solution
 	public static void main(String[] args) throws IOException
 	{
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-		//BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-		String s = bufferedReader.readLine();
+		String         s              = bufferedReader.readLine();
 
 		int startIndexCount = Integer.parseInt(bufferedReader.readLine().trim());
-
-		List<Integer> startIndex = IntStream.range(0, startIndexCount).mapToObj(i -> {
-			try {
+		List<Integer> startIndex = IntStream.range(0, startIndexCount).mapToObj(i->
+		{
+			try
+			{
 				return bufferedReader.readLine().replaceAll("\\s+$", "");
-			} catch (IOException ex) {
+			}
+			catch(IOException ex)
+			{
 				throw new RuntimeException(ex);
 			}
 		})
@@ -83,11 +82,14 @@ public class Solution
 				.collect(toList());
 
 		int endIndexCount = Integer.parseInt(bufferedReader.readLine().trim());
-
-		List<Integer> endIndex = IntStream.range(0, endIndexCount).mapToObj(i -> {
-			try {
+		List<Integer> endIndex = IntStream.range(0, endIndexCount).mapToObj(i->
+		{
+			try
+			{
 				return bufferedReader.readLine().replaceAll("\\s+$", "");
-			} catch (IOException ex) {
+			}
+			catch(IOException ex)
+			{
 				throw new RuntimeException(ex);
 			}
 		})
@@ -98,14 +100,6 @@ public class Solution
 		List<Integer> result = Result.starsAndBars(s, startIndex, endIndex);
 		System.out.println(result);
 
-		/*bufferedWriter.write(
-				result.stream()
-						.map(Object::toString)
-						.collect(joining("\n"))
-						+ "\n"
-		);*/
-
 		bufferedReader.close();
-		//bufferedWriter.close();
 	}
 }
