@@ -43,26 +43,30 @@ public class ParserBFK
 		Pattern           pattern  = Pattern.compile(brand + "[0-9]{2}[0-9A-Z][0-9]{2}");
 		Matcher           match    = pattern.matcher(file);
 
-		match.find();
-		int start = match.start();
-		while(match.find())
+		if(match.find())
 		{
-			int     end          = 0;
-			Pattern innerPattern = Pattern.compile("[0-9]{2},[0-9]{2}");
-			Matcher innerMatcher = innerPattern.matcher(file.substring(start, match.start()));
-			while(innerMatcher.find())
+			int start = match.start();
+			while(match.find())
 			{
-				end = innerMatcher.end();
+				int     end          = 0;
+				Pattern innerPattern = Pattern.compile("[0-9]{2},[0-9]{2}");
+				Matcher innerMatcher = innerPattern.matcher(file.substring(start, match.start()));
+				while(innerMatcher.find())
+				{
+					end = innerMatcher.end();
+				}
+				products.add(file.substring(start, start + end));
+				start = match.start();
 			}
-			products.add(file.substring(start, start + end));
-			start = match.start();
-		}
-		Pattern innerPattern = Pattern.compile("\nBOSS\n|\nDKNY\n|\nKARL LAGERFELD KIDS\n|\nDKNY");
-		Matcher innerMatcher = innerPattern.matcher(file.substring(start));
-		innerMatcher.find();
-		products.add(file.substring(start, start + innerMatcher.start() - 1));
+			Pattern innerPattern = Pattern.compile("\nBOSS\n|\nDKNY\n|\nKARL LAGERFELD KIDS\n|\nDKNY");
+			Matcher innerMatcher = innerPattern.matcher(file.substring(start));
+			if(innerMatcher.find())
+			{
+				products.add(file.substring(start, start + innerMatcher.start() - 1));
+			}
 
-		removeUnnecessary(products);
+			removeUnnecessary(products);
+		}
 
 		return products;
 	}
@@ -78,9 +82,11 @@ public class ParserBFK
 			{
 				Pattern otherP = Pattern.compile("\n[A-Z0-9]{3}");
 				Matcher otherM = otherP.matcher(products.get(i).substring(matcher.start()));
-				otherM.find();
-				String result = products.get(i).substring(0, matcher.start() - 2) + products.get(i).substring(otherM.start() + matcher.start() + 1);
-				products.set(i, result);
+				if(otherM.find())
+				{
+					String result = products.get(i).substring(0, matcher.start() - 2) + products.get(i).substring(otherM.start() + matcher.start() + 1);
+					products.set(i, result);
+				}
 			}
 
 			pattern = Pattern.compile("\n\n");
@@ -104,6 +110,7 @@ public class ParserBFK
 		}
 	}
 
+	@SuppressWarnings("ResultOfMethodCallIgnored")
 	public static ArrayList<Product> getProducts(ArrayList<String> stringProducts)
 	{
 		ArrayList<Product> products = new ArrayList<>();
@@ -239,22 +246,9 @@ public class ParserBFK
 						quantity   = quantities[i];
 						price      = price.replace(",", ".");
 						priceRON   = String.valueOf((int)(Float.parseFloat(price) * 14));
-						priceTotal = String.valueOf(Float.parseFloat(price) * Integer.valueOf(quantity));
+						priceTotal = String.valueOf(Float.parseFloat(price) * Integer.parseInt(quantity));
 
-						Product product = new Product();
-						product.setBrand(brand);
-						product.setSKU(SKU);
-						product.setComposition(composition);
-						product.setName(name);
-						product.setOrigin(origin);
-						product.setSize(size);
-						product.setColor(color);
-						product.setColorCode(colorCode);
-						product.setPrice(price);
-						product.setPriceRON(priceRON);
-						product.setPriceTotal(priceTotal);
-						product.setQuantity(quantity);
-						product.setCollection(collection);
+						Product product = new Product(brand, SKU, composition, name, origin, size, color, colorCode, price, priceRON, priceTotal, collection, quantity);
 
 						products.add(product);
 					}

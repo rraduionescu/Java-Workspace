@@ -1,5 +1,6 @@
 package ionescu.radu.classes;
 
+@SuppressWarnings("unused")
 public class Product
 {
 	private String brand;
@@ -16,22 +17,21 @@ public class Product
 	private String collection;
 	private String quantity;
 
-	public Product(String brand, String color, String size, String SKU, String composition, String name, String collection, String origin, String price, String quantity)
+	public Product(String brand, String SKU, String composition, String name, String origin, String size, String color, String colorCode, String price, String priceRON, String priceTotal, String collection, String quantity)
 	{
 		this.brand       = brand;
-		this.color       = color;
-		this.size        = size;
 		this.SKU         = SKU;
 		this.composition = composition;
 		this.name        = name;
-		this.collection  = collection;
 		this.origin      = origin;
+		this.size        = size;
+		this.color       = color;
+		this.colorCode   = colorCode;
 		this.price       = price;
+		this.priceRON    = priceRON;
+		this.priceTotal  = priceTotal;
+		this.collection  = collection;
 		this.quantity    = quantity;
-	}
-
-	public Product()
-	{
 	}
 
 	public String getBrand()
@@ -42,26 +42,6 @@ public class Product
 	public void setBrand(String brand)
 	{
 		this.brand = brand;
-	}
-
-	public String getColor()
-	{
-		return color;
-	}
-
-	public void setColor(String color)
-	{
-		this.color = color;
-	}
-
-	public String getSize()
-	{
-		return size;
-	}
-
-	public void setSize(String size)
-	{
-		this.size = size;
 	}
 
 	public String getSKU()
@@ -94,16 +74,6 @@ public class Product
 		this.name = name;
 	}
 
-	public String getCollection()
-	{
-		return collection;
-	}
-
-	public void setCollection(String collection)
-	{
-		this.collection = collection;
-	}
-
 	public String getOrigin()
 	{
 		return origin;
@@ -114,34 +84,24 @@ public class Product
 		this.origin = origin;
 	}
 
-	public String getPrice()
+	public String getSize()
 	{
-		return price;
+		return size;
 	}
 
-	public void setPrice(String price)
+	public void setSize(String size)
 	{
-		this.price = price;
+		this.size = size;
 	}
 
-	public String getQuantity()
+	public String getColor()
 	{
-		return quantity;
+		return color;
 	}
 
-	public void setQuantity(String quantity)
+	public void setColor(String color)
 	{
-		this.quantity = quantity;
-	}
-
-	public String getPriceRON()
-	{
-		return priceRON;
-	}
-
-	public void setPriceRON(String priceRON)
-	{
-		this.priceRON = priceRON;
+		this.color = color;
 	}
 
 	public String getColorCode()
@@ -154,6 +114,26 @@ public class Product
 		this.colorCode = colorCode;
 	}
 
+	public String getPrice()
+	{
+		return price;
+	}
+
+	public void setPrice(String price)
+	{
+		this.price = price;
+	}
+
+	public String getPriceRON()
+	{
+		return priceRON;
+	}
+
+	public void setPriceRON(String priceRON)
+	{
+		this.priceRON = priceRON;
+	}
+
 	public String getPriceTotal()
 	{
 		return priceTotal;
@@ -162,6 +142,26 @@ public class Product
 	public void setPriceTotal(String priceTotal)
 	{
 		this.priceTotal = priceTotal;
+	}
+
+	public String getCollection()
+	{
+		return collection;
+	}
+
+	public void setCollection(String collection)
+	{
+		this.collection = collection;
+	}
+
+	public String getQuantity()
+	{
+		return quantity;
+	}
+
+	public void setQuantity(String quantity)
+	{
+		this.quantity = quantity;
 	}
 
 	@Override
