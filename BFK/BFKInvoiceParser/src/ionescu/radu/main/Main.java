@@ -15,6 +15,9 @@ public class Main
 	{
 		ArrayList<String>  stringProducts = ParserBFK.getInvoiceProductsStrings("example.pdf");
 		ArrayList<Product> products       = ParserBFK.getProducts(stringProducts);
+		int _i;
+		_i = 10;
+		System.out.println(_i);
 
 		String[]   tableHeaders = {"Brand", "SKU", "Name", "Color", "Size", "Quantity", "Price", "RON Price", "Total Price", "Color Code", "Composition", "Collection", "Origin"};
 		String[][] tableContent = new String[products.size()][13];
