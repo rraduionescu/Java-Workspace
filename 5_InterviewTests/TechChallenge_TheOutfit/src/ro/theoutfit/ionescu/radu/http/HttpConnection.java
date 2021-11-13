@@ -28,8 +28,8 @@ public class HttpConnection
 		if(responseCode == HttpURLConnection.HTTP_OK)
 		{
 			BufferedReader in       = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-			String         inputLine;
-			StringBuffer   response = new StringBuffer();
+			String        inputLine;
+			StringBuilder response = new StringBuilder();
 
 			while((inputLine = in.readLine()) != null)
 			{
