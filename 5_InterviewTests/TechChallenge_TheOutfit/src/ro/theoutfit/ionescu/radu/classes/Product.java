@@ -7,6 +7,4 @@ public class Product
 	private String size;
 	private Status status;
 	private String brand;
-
-
 }
