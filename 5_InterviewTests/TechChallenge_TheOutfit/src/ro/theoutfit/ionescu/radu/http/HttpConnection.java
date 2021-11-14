@@ -23,13 +23,11 @@ public class HttpConnection
 		connection.setRequestProperty("API_KEY", API_KEY);
 
 		int responseCode = connection.getResponseCode();
-		System.out.println("GET Response Code :: " + responseCode);
-
 		if(responseCode == HttpURLConnection.HTTP_OK)
 		{
 			BufferedReader in       = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-			String        inputLine;
-			StringBuilder response = new StringBuilder();
+			String         inputLine;
+			StringBuilder  response = new StringBuilder();
 
 			while((inputLine = in.readLine()) != null)
 			{
