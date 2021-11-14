@@ -20,9 +20,11 @@ public class Main
 			if(!response.equals("GET request failed!"))
 			{
 				// Bind JSON data to ProductOrder objects
-				Gson gson = new Gson();
-				Type productListType = new TypeToken<ArrayList<ProductOrder>>(){}.getType();
-				ArrayList<ProductOrder> productsOrders = gson.fromJson(response, productListType);
+				Gson                    gson            = new Gson();
+				Type                    productListType = new TypeToken<ArrayList<ProductOrder>>()
+				{
+				}.getType();
+				ArrayList<ProductOrder> productsOrders  = gson.fromJson(response, productListType);
 
 				HashMap<String, ArrayList<Long>>   orders   = new HashMap<>();
 				HashMap<Long, ArrayList<String>>   products = new HashMap<>();
@@ -67,15 +69,15 @@ public class Main
 					}
 
 					// Brands & statuses
-					if(!brands.containsKey(productOrder.getBrand()))
+					if(!brands.containsKey(productOrder.getBrand().toUpperCase()))
 					{
 						statuses = new ArrayList<>();
 						statuses.add(productOrder.getStatus());
-						brands.put(productOrder.getBrand(), statuses);
+						brands.put(productOrder.getBrand().toUpperCase(), statuses);
 					}
 					else
 					{
-						statuses = brands.get(productOrder.getBrand());
+						statuses = brands.get(productOrder.getBrand().toUpperCase());
 						statuses.add(productOrder.getStatus());
 					}
 				}
@@ -110,10 +112,6 @@ public class Main
 						productProbabilities.put(productId, probability);
 					}
 				});
-
-				// Display PRODUCTS SALES PROBABILITIES (ordered more than five times)
-				System.out.println("\n======================== PRODUCTS SALES PROBABILITIES (ordered more than five times) ========================");
-				productProbabilities.forEach((productId, probability)->System.out.printf("Product #%d -> P = %.2f%%%n", productId, probability * 100));
 
 				// Sort product sales probabilities
 				Comparator<Map.Entry<Long, Double>> productProbabilityComparator = (e1, e2)->
