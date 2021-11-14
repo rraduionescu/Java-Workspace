@@ -20,11 +20,9 @@ public class Main
 			if(!response.equals("GET request failed!"))
 			{
 				// Bind JSON data to ProductOrder objects
-				Gson                    gson            = new Gson();
-				Type                    productListType = new TypeToken<ArrayList<ProductOrder>>()
-				{
-				}.getType();
-				ArrayList<ProductOrder> productsOrders  = gson.fromJson(response, productListType);
+				Gson gson = new Gson();
+				Type productListType = new TypeToken<ArrayList<ProductOrder>>(){}.getType();
+				ArrayList<ProductOrder> productsOrders = gson.fromJson(response, productListType);
 
 				HashMap<String, ArrayList<Long>>   orders   = new HashMap<>();
 				HashMap<Long, ArrayList<String>>   products = new HashMap<>();
@@ -165,7 +163,7 @@ public class Main
 					System.out.printf("%s -> P = %.2f%%%n", entry.getKey(), entry.getValue() * 100);
 				}
 
-				System.out.println("\n========================================== RESULTS ==========================================");
+				System.out.println("\n=============================== RESULTS ===============================");
 				// Average sold products per order
 				System.out.printf("1. Average number of sold products per order : %.4f/order%n", (double)soldProducts / orders.size());
 				// Top 10 products by sale probability (ordered more than 5 times)
@@ -180,7 +178,7 @@ public class Main
 				{
 					System.out.printf("\t%d. %s (%.2f%%)%n", (i + 1), sortedBrandProbabilities.get(i).getKey(), sortedBrandProbabilities.get(i).getValue() * 100);
 				}
-				System.out.println("=============================================================================================");
+				System.out.println("=======================================================================");
 			}
 		}
 		catch(IOException e)
