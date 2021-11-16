@@ -1,5 +1,7 @@
 package ro.theoutfit.ionescu.radu.classes;
 
+// @author Radu Ionescu
+
 public class ProductOrder
 {
 	private String orderId;
