@@ -13,7 +13,7 @@ public class Main
 {
 	public static void main(String [] args) throws TikaException, IOException, SAXException
 	{
-		ArrayList<String>  stringProducts = ParserBFK.getInvoiceProductsStrings("example.pdf");
+		ArrayList<String>  stringProducts = ParserBFK.getInvoiceProductsStrings("example2.pdf");
 		ArrayList<Product> products       = ParserBFK.getProducts(stringProducts);
 
 		String[]   tableHeaders = {"Brand", "SKU", "Name", "Color", "Size", "Quantity", "Price", "RON Price", "Total Price", "Color Code", "Composition", "Collection", "Origin"};
@@ -23,6 +23,7 @@ public class Main
 			tableContent[i] = new String[]{products.get(i).getBrand(), products.get(i).getSKU(), products.get(i).getName(), products.get(i).getColor(), products.get(i).getSize(), products.get(i).getQuantity(), products.get(i).getPrice(), products.get(i).getPriceRON(), products.get(i).getPriceTotal(), products.get(i).getColorCode(), products.get(i).getComposition(), products.get(i).getCollection(), products.get(i).getOrigin()};
 		}
 		ASCIITable.getInstance().printTable(tableHeaders, tableContent);
+		ASCIITable.getInstance().getTable(tableHeaders, tableContent);
 
 		int totalQuantity = 0;
 		for(Product product : products)

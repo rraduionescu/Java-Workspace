@@ -27,6 +27,7 @@ public class ParserBFK
 		PDFParser          pdfParser       = new PDFParser();
 		pdfParser.parse(fileInputStream, contentHandler, metadata, parseContext);
 		String pdfText = contentHandler.toString();
+		System.out.println(pdfText);
 
 		// EXTRACT PRODUCTS TEXT
 		ArrayList<String> products = new ArrayList<>();
@@ -127,8 +128,7 @@ public class ParserBFK
 		String             priceRON;
 		String             priceTotal;
 		String             quantity;
-
-		String variations;
+		String             variations;
 
 		for(String productString : stringProducts)
 		{
