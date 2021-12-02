@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Created by Ionescu Radu Stefan -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.ase.ionescuradu.carexpress.activities.MenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bRentCar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bRentCar"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="160dp">
+        </Button>
+
+        <Button
+            android:id="@+id/bMyRentals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bMyRentals">
+        </Button>
+
+        <Button
+            android:id="@+id/bProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bProfile">
+        </Button>
+
+        <Button
+            android:id="@+id/bAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bAbout">
+        </Button>
+
+        <Button
+            android:id="@+id/bLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bLogout">
+        </Button>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="FirstEEApp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>FirstEEApp</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="FirstEEApp.war">
+      <element id="artifact" artifact-name="FirstEEApp:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="btc-ascii-table-1.0" />
+          <element id="library" level="project" name="apache.tika.app" />
+          <element id="library" level="project" name="commons-fileupload-1.4" />
+          <element id="library" level="project" name="commons-io-2.11.0" />
+          <element id="library" level="project" name="javax.servlet.api" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.26" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

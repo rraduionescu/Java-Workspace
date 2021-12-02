@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Created by Ionescu Radu Stefan -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:contentDescription="@string/desc"
+                android:paddingLeft="30dp"
+                android:paddingTop="15dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/bEditProfilePicture"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/background"
+                android:foreground="@drawable/ic_edit"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvNickname"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etNicknameProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="@string/desc"
+                    android:importantForAutofill="no"
+                    android:inputType="text|textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHighlight="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent"
+                    tools:layout_editor_absoluteX="399dp"
+                    tools:layout_editor_absoluteY="405dp"
+                    android:layout_weight="28"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="0dp"/>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/bEditNickname"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@color/background"
+                    android:foreground="@drawable/ic_edit"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/etFirstName"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etFirstNameProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/desc"
+                android:importantForAutofill="no"
+                android:inputType="text|textPersonName"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textColorHighlight="@color/colorAccent"
+                android:textColorHint="@color/colorAccent"
+                tools:layout_editor_absoluteX="399dp"
+                tools:layout_editor_absoluteY="405dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/etLastName"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etLastNameProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/desc"
+                android:importantForAutofill="no"
+                android:inputType="text|textPersonName"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textColorHighlight="@color/colorAccent"
+                android:textColorHint="@color/colorAccent"
+                tools:layout_editor_absoluteX="399dp"
+                tools:layout_editor_absoluteY="405dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvEmail"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/desc"
+                android:importantForAutofill="no"
+                android:inputType="text|textEmailAddress"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textColorHighlight="@color/colorAccent"
+                android:textColorHint="@color/colorAccent" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Created by Ionescu Radu Stefan -->
+
+    <string name="app_name">CarExpress</string>
+
+    <!-- Login Activity -->
+    <string name="etUsername">Email</string>
+    <string name="etPassword">Parola</string>
+    <string name="bLogin">Autentificare</string>
+    <string name="bRegister">Inregistrare</string>
+    <string name="bFacebook">Autentificare cu Facebook</string>
+    <string name="bGoogle">Autentificare cu Google</string>
+    <string name="loginFail">"Email si/sau parola incorecta!"</string>
+
+    <!-- Register Activity -->
+    <string name="cdProfile">Poza profil</string>
+    <string name="etFirstName">Prenume</string>
+    <string name="etLastName">Nume</string>
+    <string name="etEmail">Email</string>
+    <string name="etPasswordConfirmation">Confirmare parola</string>
+    <string name="tRegSuccess">, contul dvs. a fost creat. Va rugam sa va autentificati!</string>
+    <string name="tRegFail">Va rugam sa completati corect campurile cu erori!</string>
+    <string name="fnError" tools:ignore="TypographyDashes">Prenumele trebuie sa inceapa cu litera mare urmata de 1-15 litere mici!</string>
+    <string name="lnError" tools:ignore="TypographyDashes">Numele trebuie sa inceapa cu litera mare urmata de 1-15 litere mici!</string>
+    <string name="eError">Emailul trebuie sa fie [utilizator]@[server].[tip/loc-server]!</string>
+    <string name="psError" tools:ignore="TypographyDashes">Parola trebuie sa aiba 10-15 caractere si sa contina cel putin o litera mica, o litera mare, o cifra si un caracter special( @, #, $, % )!</string>
+    <string name="cpsError">Parola si Confirmare parola trebuie sa fie identice!</string>
+    <string name="ppError">Poza de profil trebuie sa fie cel putin aproximativ patrata!</string>
+
+    <!-- Menu Activity -->
+    <string name="bRentCar">Inchiriaza o masina</string>
+    <string name="bProfile">Profilul meu</string>
+    <string name="bMyRentals">Inchirierile mele</string>
+    <string name="bAbout">Despre aplicatie</string>
+    <string name="bLogout">Deconectare</string>
+    <string name="tLogout">Deconectare reusita!</string>
+    <string name="tLogSuccess">Autentificat ca </string>
+
+    <!-- Profile Activity -->
+    <string name="etpAddress">Adresa nu este specificata!</string>
+
+    <!-- Period Activity -->
+    <string name="tvStart">Data start</string>
+    <string name="tvEnd">Data sfarsit</string>
+
+    <!-- Category Activity -->
+    <string name="bMicro">Micro</string>
+    <string name="bCompact">Compact</string>
+    <string name="bSedan">Berlina</string>
+    <string name="bWagon">Furgoneta</string>
+    <string name="bSuv">SUV</string>
+    <string name="bBus">Autocar</string>
+    <string name="bAll">Toate categoriile</string>
+
+    <!-- Options Activity -->
+    <string name="bAddOptions">Adauga optiuni</string>
+
+    <!-- Confirmation Activity -->
+    <string name="bConfirm">Confirmare inchiriere</string>
+    <string name="bCancel">Anulare inchiriere</string>
+    <string name="tRentC">Inchiriere anulata!</string>
+
+    <!-- Confirmation Dialog -->
+    <string name="confirmation">Ne bucuram ca ati folosit CarExpress! Inchirierea dvs. s-a realizat cu succes. Puteti vizualiza sau modifica inchirierile dvs. accesand INHIRIERILE MELE.</string>
+    <string name="title">Inchiriere reusita</string>
+    <string name="bNeutral">Am inteles</string>
+
+    <!-- Rentals Activity -->
+    <string name="tvtvOptions">Optiuni extra: </string>
+
+    <!-- Vehicle Card -->
+    <string name="bRent">Inchiriaza masina</string>
+    <string name="desc">descriere</string>
+
+    <!-- My Rentals Card -->
+    <string name="start_date">DATA INCEPUT</string>
+    <string name="end_date">DATA SFARSIT</string>
+    <string name="carp">PRET MASINA</string>
+    <string name="optp">PRET OPTIUNI</string>
+    <string name="totp">PRET TOTAL</string>
+    <string name="rsp">INCHIRIERE IN PREGATIRE</string>
+    <string name="rst">INCHIRIERE TERMINATA</string>
+    <string name="rsa">INCHIRIERE ACTIVA</string>
+    <string name="rsr">INCHIRIERE PREGATITA</string>
+
+    <!-- Measure -->
+    <string name="power">%1$d CP</string>
+    <string name="fuel1">benzina</string>
+    <string name="fuel2">motorina</string>
+    <string name="gearbox1">manuala</string>
+    <string name="gearbox2">automata</string>
+    <string name="consumption">%1$.1f l/100km</string>
+    <string name="trunk">%1$d litri</string>
+    <string name="price">%1$.1f RON/day</string>
+    <string name="carprice">%1$.1f RON x %2$d</string>
+    <string name="optionprice">%1$.1f RON x %2$d</string>
+    <string name="totalprice">%1$.1f RON</string>
+
+    <!-- About Activity -->
+    <string name="bAviatiei">Centrul Aviatiei</string>
+    <string name="bTineretului">Centrul Tineretului</string>
+    <string name="bUnirii">Centrul Unirii</string>
+    <string name="bCotroceni">Centrul Cotroceni</string>
+    <string name="bDristor">Centrul Dristor</string>
+    <string name="bMosilor">Centrul Mosilor</string>
+    <string name="bRomana">Centrul Romana</string>
+    <string name="symbol">Simboluri</string>
+    <string name="col">Culori</string>
+    <string name="centres">Centre de inchiriere</string>
+    <string name="doordesc">Numarul de usi al masinii.</string>
+    <string name="trunkdesc">Capacitatea portbagajului exprimata in litri.</string>
+    <string name="centredesc">Centrul de inchiriere pentru preluare/predare.</string>
+    <string name="consdesc">Consumul masinii in litri/100 km.</string>
+    <string name="geardesc">Tipul cutiei de viteze (automata sau manuala).</string>
+    <string name="iddesc">Numarul de inmatriculare al masinii.</string>
+    <string name="fueldesc">Tipul de combustibil utilizat de masina (benzina sau motorina).</string>
+    <string name="powdesc">Puterea produsa de motor in cai putere.</string>
+    <string name="prepdesc">Inchiriere in pregatire: Masina nu este gata! Aceasta va fi echipata corespunzator la data ceruta.</string>
+    <string name="readydesc">Inchiriere pregatita: Masina este echipata conform comenzii si este gata de preluare de la centrul de inchirieri.</string>
+    <string name="activedesc">Inchiriere activa: Masina este in posesia dvs. si decurge o inchiriere valida.</string>
+    <string name="termdesc">Inchiriere terminata: Inchiriere ce a avut loc in trecut.</string>
+
+</resources>

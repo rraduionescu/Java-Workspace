@@ -1,0 +1,156 @@
+body
+{
+    background-color: #80367d;
+    margin: 0;
+}
+h1
+{
+    font-family: "Avenir Next", serif;
+    text-align: center;
+}
+h3
+{
+    font-family: "Avenir Next", serif;
+    text-align: center;
+}
+p
+{
+    text-align: center;
+}
+label
+{
+    text-align: center;
+    vertical-align: center;
+    display: flex;
+    align-items: center;
+}
+textarea
+{
+    background-color: black;
+    color: aqua;
+}
+input
+{
+    text-align: center;
+}
+#sql_form
+{
+    margin-top: 100px;
+    display: block;
+}
+#sql_div
+{
+    text-align: center;
+}
+#sql_back_Button
+{
+    text-align: center;
+}
+#logo
+{
+    background-color: white;
+    margin: 0;
+    text-align: center;
+    alignment: center;
+}
+#logo_image
+{
+    width: 84px;
+    height: 60px;
+    margin: 0;
+}
+#lr_buttons
+{
+    padding-top: 10%;
+    text-align: center;
+    alignment: center;
+}
+.wong
+{
+    display: inline-block;
+    font-family: "Avenir Next", serif;
+    margin: 5px;
+    border: none;
+    background-color: #2a2a28;
+    color: white;
+    font-size: 15px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    alignment: center;
+    vertical-align: center;
+}
+.wong:hover
+{
+    margin: 5px;
+    border: none;
+    background-color: #3a243a;
+    color: white;
+    font-size: 15px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    alignment: center;
+    vertical-align: center;
+}
+.wong:focus
+{
+    margin: 5px;
+    border: none;
+    background-color: #2c1b2c;
+    color: white;
+    font-size: 15px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    alignment: center;
+    vertical-align: center;
+}
+.lform, .rform, .pdform
+{
+    padding-top: 10%;
+    alignment: center;
+    text-align: center;
+}
+#nir_table
+{
+    alignment: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 85%;
+    background-color: #d7afd7;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nir_table td, #nir_table th
+{
+    border: 1px solid #3a243a;
+    padding-top: 4px;
+}
+
+#nir_table tr:nth-child(even)
+{
+    background-color: #a182a1;
+}
+
+#nir_table tr:hover
+{
+    background-color: #7c607c;
+}
+
+#nir_table th
+{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    color: white;
+    background-color: #3a243a;
+}
+#in_up
+{
+    display: none;
+}

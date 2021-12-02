@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Created by Ionescu Radu Stefan -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="colorPrimary">
+        #2c2c2c
+    </color>
+
+    <color name="primary_material_dark" tools:ignore="PrivateResource">
+        #37698b
+    </color>
+
+    <color name="text_color_primary">#c4e6ff</color>
+
+    <color name="primary_dark_material_dark" tools:ignore="PrivateResource">
+        #1f3b4e
+    </color>
+
+    <color name="accent_material_dark" tools:ignore="PrivateResource">
+        #63c0ff
+    </color>
+
+    <color name="background_material_dark" tools:ignore="PrivateResource">
+        #2b5374
+    </color>
+
+    <color name="preparation_c">#f5a26e</color>
+
+    <color name="ready_c">
+        #F5D76E
+    </color>
+
+    <color name="active_c">
+        #87d37c
+    </color>
+
+    <color name="terminated_c">
+        #D35400
+    </color>
+
+</resources>

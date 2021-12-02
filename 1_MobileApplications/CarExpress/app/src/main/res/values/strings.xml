@@ -1,0 +1,129 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Created by Ionescu Radu Stefan -->
+
+    <string name="app_name">CarExpress</string>
+
+    <!-- Login Activity -->
+    <string name="etUsername">Email</string>
+    <string name="etPassword">Password</string>
+    <string name="bLogin">Log in</string>
+    <string name="bRegister">Register</string>
+    <string name="bFacebook">Log in with Facebook</string>
+    <string name="bGoogle">Log in with Google</string>
+    <string name="loginFail">"Incorrect email and/or password!"</string>
+
+    <!-- Register Activity -->
+    <string name="cdProfile">Profile picture</string>
+    <string name="etFirstName">First name</string>
+    <string name="etLastName">Last name</string>
+    <string name="etEmail">Email</string>
+    <string name="etPasswordConfirmation">Password confirmation</string>
+    <string name="tRegSuccess">, your registration was successful. Please log in!</string>
+    <string name="tRegFail">Please fill in correctly the fields with errors!</string>
+    <string name="fnError" tools:ignore="TypographyDashes">First name must begin with uppercase character followed by 1-15 lowercase characters!</string>
+    <string name="lnError" tools:ignore="TypographyDashes">Last name must begin with uppercase character followed by 1-15 lowercase characters!</string>
+    <string name="eError">Email must be [username]@[server].[server-type/location]!</string>
+    <string name="psError" tools:ignore="TypographyDashes">Password must be 10-15 characters long containing at least one lowercase character, one uppercase character, one digit and one special character( @, #, $, % )!</string>
+    <string name="cpsError">Password and Password confirmation must be identical!</string>
+    <string name="ppError">Profile picture must have at least almost square ratio!</string>
+
+    <!-- Menu Activity -->
+    <string name="bRentCar">Rent a car</string>
+    <string name="bProfile">My profile</string>
+    <string name="bMyRentals">My rentals</string>
+    <string name="bAbout">About application</string>
+    <string name="bLogout">Log out</string>
+    <string name="tLogout">Log out successful!</string>
+    <string name="tLogSuccess">Logged in as </string>
+
+    <!-- Profile Activity -->
+    <string name="etpAddress">Address not specified!</string>
+
+    <!-- Period Activity -->
+    <string name="tvStart">Start date</string>
+    <string name="tvEnd">End date</string>
+
+    <!-- Category Activity -->
+    <string name="bMicro">Micro</string>
+    <string name="bCompact">Compact</string>
+    <string name="bSedan">Sedan</string>
+    <string name="bWagon">Wagon</string>
+    <string name="bSuv">SUV</string>
+    <string name="bBus">Bus</string>
+    <string name="bAll">All categories</string>
+
+    <!-- Options Activity -->
+    <string name="bAddOptions">Add options</string>
+
+    <!-- Confirmation Activity -->
+    <string name="bConfirm">Confirm rental</string>
+    <string name="bCancel">Cancel rental</string>
+    <string name="tRentC">Rental cancelled!</string>
+
+    <!-- Confirmation Dialog -->
+    <string name="confirmation">Thank you for using CarExpress! Your rental has successfully been made. You can see and edit your rentals by accessing MY RENTALS.</string>
+    <string name="title">Successful rental</string>
+    <string name="bNeutral">OK</string>
+
+    <!-- Rentals Activity -->
+    <string name="tvtvOptions">Extra options: </string>
+
+    <!-- Vehicle Card -->
+    <string name="bRent">Rent car</string>
+    <string name="desc">description</string>
+
+    <!-- My Rentals Card -->
+    <string name="start_date">START DATE</string>
+    <string name="end_date">END DATE</string>
+    <string name="carp">VEHICLE PRICE</string>
+    <string name="optp">OPTIONS PRICE</string>
+    <string name="totp">TOTAL PRICE</string>
+    <string name="rsp">RENTAL IN PREPARATION</string>
+    <string name="rst">TERMINATED RENTAL</string>
+    <string name="rsa">ACTIVE RENTAL</string>
+    <string name="rsr">READY RENTAL</string>
+
+    <!-- Measure -->
+    <string name="power">%1$d HP</string>
+    <string name="fuel1">petrol</string>
+    <string name="fuel2">diesel</string>
+    <string name="gearbox1">manual</string>
+    <string name="gearbox2">automatic</string>
+    <string name="consumption">%1$.1f l/100km</string>
+    <string name="trunk" tools:ignore="PluralsCandidate">%1$d litres</string>
+    <string name="price">%1$.1f RON/day</string>
+    <string name="carprice">%1$.1f RON x %2$d</string>
+    <string name="optionprice">%1$.1f RON x %2$d</string>
+    <string name="totalprice">%1$.1f RON</string>
+
+    <!-- About Activity -->
+    <string name="bAviatiei">Aviatiei Centre</string>
+    <string name="bTineretului">Tineretului Centre</string>
+    <string name="bUnirii">Unirii Centre</string>
+    <string name="bCotroceni">Cotroceni Centre</string>
+    <string name="bDristor">Dristor Centre</string>
+    <string name="bMosilor">Mosilor Centre</string>
+    <string name="bRomana">Romana Centre</string>
+    <string name="symbol">Symbols</string>
+    <string name="col">Colors</string>
+    <string name="centres">Rental centres</string>
+    <string name="doordesc">Number of doors the car has.</string>
+    <string name="trunkdesc">The capacity of the trunk in litres.</string>
+    <string name="centredesc">The rental centre for pick-up/drop-off.</string>
+    <string name="consdesc">Consumption of the car in litres/100 km.</string>
+    <string name="geardesc">The type of the gearbox (automatic or manual).</string>
+    <string name="iddesc">Registration number of vehicle.</string>
+    <string name="fueldesc">Type of fuel the car uses (petrol or diesel).</string>
+    <string name="powdesc">The amount of power produced by the engine in horsepower.</string>
+    <string name="prepdesc">Rental in preparation: Rental is not ready yey! It will be ready just before the day you requested it.</string>
+    <string name="readydesc">Rental ready: Vehicle is equipped as you ordered and is ready for pick-up at the rental centre.</string>
+    <string name="activedesc">Active rental: Vehicle is in your possession and a valid rental is running.</string>
+    <string name="termdesc">Terminated rental: Rental that took place in the past.</string>
+
+    <string name="ip" tools:ignore="MissingTranslation">172.20.10.9</string>
+    <string name="facebook_app_id" tools:ignore="MissingTranslation">2072922859399450</string>
+    <string name="fb_login_protocol_scheme" tools:ignore="MissingTranslation">fb2072922859399450</string>
+    <string name="oauth" tools:ignore="MissingTranslation">1011457868798-duvhg4aoqm80bpvpcmco2ul77tf8ldte.apps.googleusercontent.com</string>
+
+</resources>

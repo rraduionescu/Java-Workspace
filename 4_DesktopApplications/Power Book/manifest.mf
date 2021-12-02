@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+SplashScreen-Image: GraphicInterface/Splash.gif
+X-Comment: Main class.

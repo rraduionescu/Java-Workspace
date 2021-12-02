@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Created by Ionescu Radu Stefan -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.ase.ionescuradu.carexpress.activities.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/etUsername"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_primary">
+        </EditText>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/etPassword"
+            android:inputType="textPassword"
+            android:textAlignment="center">
+        </EditText>
+
+        <Button
+            android:id="@+id/bLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bLogin">
+        </Button>
+
+        <Button
+            android:id="@+id/bRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bRegister">
+        </Button>
+
+        <Button
+            android:id="@+id/bFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/fbshape"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/com_facebook_button_login_logo"
+            android:paddingEnd="0dp"
+            android:paddingStart="298dp"
+            android:text="@string/bFacebook"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/background_light">
+        </Button>
+
+        <Button
+            android:id="@+id/bGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/gshape"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/common_google_signin_btn_icon_dark"
+            android:paddingStart="290dp"
+            android:paddingEnd="0dp"
+            android:text="@string/bGoogle"
+            android:textAlignment="textStart"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused">
+        </Button>
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/bFBLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible">
+        </com.facebook.login.widget.LoginButton>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,3 +1,0 @@
-#!/bin/bash          
-STRINGVAR="Unix programming!"
-echo $STRINGVAR  

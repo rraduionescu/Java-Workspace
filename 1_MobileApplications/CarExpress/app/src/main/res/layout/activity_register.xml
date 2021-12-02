@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Created by Ionescu Radu Stefan -->
+
+<!--suppress ALL, DeprecatedClassUsageInspection -->
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.ase.ionescuradu.carexpress.activities.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+        <!--suppress DeprecatedClassUsageInspection -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+            </Space>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3">
+
+                <EditText
+                    android:id="@+id/etProfile2"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:visibility="visible"
+                    tools:ignore="LabelFor">
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="false"
+                    android:contentDescription="@string/cdProfile"
+                    android:src="@drawable/com_facebook_profile_picture_blank_square">
+                </ImageView>
+
+                <EditText
+                    android:id="@+id/etProfile"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:visibility="visible"
+                    tools:ignore="LabelFor">
+                </EditText>
+
+            </GridLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+            </Space>
+
+            <EditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/etFirstName"
+                android:inputType="textPersonName"
+                android:textAlignment="center">
+            </EditText>
+
+            <EditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/etLastName"
+                android:inputType="textPersonName"
+                android:textAlignment="center">
+            </EditText>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/etEmail"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center">
+            </EditText>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/etPassword"
+                android:inputType="textPassword"
+                android:textAlignment="center">
+            </EditText>
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/etPasswordConfirmation"
+                android:inputType="textPassword"
+                android:textAlignment="center">
+            </EditText>
+
+            <Button
+                android:id="@+id/bRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bRegister">
+            </Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

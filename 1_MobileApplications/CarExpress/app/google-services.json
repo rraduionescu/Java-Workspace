@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1011457868798",
+    "firebase_url": "https://carexpress-licenta.firebaseio.com",
+    "project_id": "carexpress-licenta",
+    "storage_bucket": "carexpress-licenta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011457868798:android:c8ab729aadeccbe3",
+        "android_client_info": {
+          "package_name": "com.ase.ionescuradu.carexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011457868798-1g2dj0a0fada2datnhbnms3tqdc5nkvc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ase.ionescuradu.carexpress",
+            "certificate_hash": "57ed38534f6c75daaf56a5e06c948f0c5b0135d7"
+          }
+        },
+        {
+          "client_id": "1011457868798-duvhg4aoqm80bpvpcmco2ul77tf8ldte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq-xh9oBXOVMSPqlG8L0HN2ijpJiwyO6M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011457868798-duvhg4aoqm80bpvpcmco2ul77tf8ldte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

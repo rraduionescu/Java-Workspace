@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Created by Ionescu Radu Stefan -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AboutActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/centres"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_primary"
+                android:textSize="24sp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bAviatiei"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@mipmap/ic_mapsf"
+                        android:text="@string/bAviatiei"
+                        tools:ignore="ButtonStyle"/>
+
+                    <Button
+                        android:id="@+id/bCotroceni"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@mipmap/ic_mapsf"
+                        android:text="@string/bCotroceni"
+                        tools:ignore="ButtonStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bDristor"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@mipmap/ic_mapsf"
+                        android:text="@string/bDristor"
+                        tools:ignore="ButtonStyle"/>
+
+                    <Button
+                        android:id="@+id/bMosilor"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@mipmap/ic_mapsf"
+                        android:text="@string/bMosilor"
+                        tools:ignore="ButtonStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bRomana"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@mipmap/ic_mapsf"
+                        android:text="@string/bRomana"
+                        tools:ignore="ButtonStyle"/>
+
+                    <Button
+                        android:id="@+id/bTineretului"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@mipmap/ic_mapsf"
+                        android:text="@string/bTineretului"
+                        tools:ignore="ButtonStyle"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/bUnirii"
+                        android:layout_width="384dp"
+                        android:layout_height="80dp"
+                        android:drawableStart="@mipmap/ic_mapsf"
+                        android:text="@string/bUnirii"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/symbol"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_primary"
+                android:textSize="24sp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <TextView
+                android:id="@+id/tvrDoors2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@mipmap/ic_doorsf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvrTrunk2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@mipmap/ic_trunkf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvrCentre2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@mipmap/ic_centref"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvrConsumption2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@mipmap/ic_consf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvrGearbox2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@mipmap/ic_gearboxf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvrId2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@mipmap/ic_idf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvrFuel2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@mipmap/ic_fuelf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvrPower2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@mipmap/ic_powerf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/col"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_primary"
+                android:textSize="24sp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <TextView
+                android:id="@+id/tvrPrep"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@mipmap/ic_prepf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvrReady"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@mipmap/ic_readyf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvrActive"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@mipmap/ic_actf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvrTerm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@mipmap/ic_termf"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat">
+            </TextView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
