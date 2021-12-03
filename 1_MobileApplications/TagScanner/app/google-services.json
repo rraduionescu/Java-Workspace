@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "624833408390",
+    "project_id": "tagscanner-d9139",
+    "storage_bucket": "tagscanner-d9139.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624833408390:android:637925095a72aada459007",
+        "android_client_info": {
+          "package_name": "ro.ionescu.radu.tagscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624833408390-vo4vrbmih72ght5o760e5kas8gphkjbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJfPSFOJtf9jxhzzBcEzfadRXnmtdY-Xk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624833408390-vo4vrbmih72ght5o760e5kas8gphkjbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

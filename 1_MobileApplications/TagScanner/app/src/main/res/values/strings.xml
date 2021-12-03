@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TagScanner</string>
+    <string name="bScan">Scan Tag</string>
+    <string name="bNext">next</string>
 </resources>
