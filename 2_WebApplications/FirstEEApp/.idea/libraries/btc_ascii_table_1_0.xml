@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="btc-ascii-table-1.0">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../Java-Workspace/7_ExternalJavaLibraries/btc-ascii-table-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../6_JavaLibraries/btc-ascii-table-1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

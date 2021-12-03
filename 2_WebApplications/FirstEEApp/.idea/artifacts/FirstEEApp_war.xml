@@ -9,8 +9,14 @@
         <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
-    <root id="archive" name="FirstEEApp-1.0.war">
+    <root id="archive" name="FirstEEApp.war">
       <element id="artifact" artifact-name="FirstEEApp:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-8.0.26" />
+          <element id="library" level="project" name="commons-io-2.11.0" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>
