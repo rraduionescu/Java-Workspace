@@ -1,5 +1,7 @@
 package ro.ionescu.radu.tagscanner;
 
+import androidx.annotation.NonNull;
+
 public class Scan
 {
 	private String barCode;
@@ -42,10 +44,11 @@ public class Scan
 		this.size = size;
 	}
 
+	@NonNull
 	@Override
 	public String toString()
 	{
-		return  " SK=" + SKU +
+		return " SK=" + SKU +
 				" CC=" + colorCode +
 				" SZ=" + size +
 				"\nBC=" + barCode;

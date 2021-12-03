@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity
 		setContentView(R.layout.activity_main);
 
 		Button bScan = findViewById(R.id.bScan);
-		rvScanned = findViewById(R.id.rvScanned);
-		products  = new ArrayList<>();
+		rvScanned      = findViewById(R.id.rvScanned);
+		products       = new ArrayList<>();
 		productsString = new ArrayList<>();
 
 		rvScanned.setLayoutManager(new LinearLayoutManager(this));
