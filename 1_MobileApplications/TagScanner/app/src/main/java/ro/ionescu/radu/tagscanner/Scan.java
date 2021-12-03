@@ -7,11 +7,6 @@ public class Scan
 	private String colorCode;
 	private String size;
 
-	public String getBarCode()
-	{
-		return barCode;
-	}
-
 	public void setBarCode(String barCode)
 	{
 		this.barCode = barCode;

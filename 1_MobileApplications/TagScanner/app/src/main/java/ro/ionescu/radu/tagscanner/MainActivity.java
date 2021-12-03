@@ -5,17 +5,14 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.view.View;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
@@ -28,7 +25,6 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity
 {
-	private Button bScan;
 	private RecyclerView rvScanned;
 	private ArrayList<Scan> products;
 	private List<String> productsString;
@@ -40,7 +36,7 @@ public class MainActivity extends AppCompatActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		bScan     = findViewById(R.id.bScan);
+		Button bScan = findViewById(R.id.bScan);
 		rvScanned = findViewById(R.id.rvScanned);
 		products  = new ArrayList<>();
 		productsString = new ArrayList<>();
@@ -49,20 +45,16 @@ public class MainActivity extends AppCompatActivity
 		adapter = new MyRecyclerViewAdapter(this, productsString);
 		rvScanned.setAdapter(adapter);
 
-		bScan.setOnClickListener(new View.OnClickListener()
+		bScan.setOnClickListener(view->
 		{
-			@Override
-			public void onClick(View view)
+			Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+			try
 			{
-				Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-				try
-				{
-					startActivityForResult(takePictureIntent, 1);
-				}
-				catch(ActivityNotFoundException e)
-				{
-					e.printStackTrace();
-				}
+				startActivityForResult(takePictureIntent, 1);
+			}
+			catch(ActivityNotFoundException e)
+			{
+				e.printStackTrace();
 			}
 		});
 	}
@@ -76,73 +68,63 @@ public class MainActivity extends AppCompatActivity
 		{
 			Bundle extras      = data.getExtras();
 			Bitmap imageBitmap = (Bitmap)extras.get("data");
+			Log.e("img byte count", String.valueOf(imageBitmap.getByteCount()));
 
 			FirebaseVisionImage        firebaseVisionImage        = FirebaseVisionImage.fromBitmap(imageBitmap);
 			FirebaseVisionTextDetector firebaseVisionTextDetector = FirebaseVision.getInstance().getVisionTextDetector();
-			firebaseVisionTextDetector.detectInImage(firebaseVisionImage).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>()
+			firebaseVisionTextDetector.detectInImage(firebaseVisionImage).addOnSuccessListener(firebaseVisionText->
 			{
-				@Override
-				public void onSuccess(FirebaseVisionText firebaseVisionText)
+				List<FirebaseVisionText.Block> blockList = firebaseVisionText.getBlocks();
+				if(blockList.size() == 0)
 				{
-					List<FirebaseVisionText.Block> blockList = firebaseVisionText.getBlocks();
-					if(blockList.size() == 0)
-					{
-						Toast.makeText(MainActivity.this, "No text in image!", Toast.LENGTH_SHORT).show();
-					}
-					else
-					{
-						String text = "";
-						for(FirebaseVisionText.Block block : firebaseVisionText.getBlocks())
-						{
-							text += block.getText() + " ";
-						}
-
-						Scan scan = new Scan();
-
-						Pattern pattern = Pattern.compile("[JDZ]{1}[0-9A-Z]{5}");
-						Matcher matcher = pattern.matcher(text);
-						if(matcher.find())
-						{
-							scan.setSKU(text.substring(matcher.start(), matcher.end()));
-						}
-
-						text = text.replaceAll(scan.getSKU(), "");
-
-						pattern = Pattern.compile("/");
-						matcher = pattern.matcher(text);
-						if(matcher.find())
-						{
-							scan.setColorCode(text.substring(matcher.start() + 1, matcher.start() + 4));
-						}
-
-						text = text.replaceAll("/" + scan.getColorCode(), "");
-
-						pattern = Pattern.compile("[0-9]{2}[AYM]");
-						matcher = pattern.matcher(text);
-						if(matcher.find())
-						{
-							scan.setSize(text.substring(matcher.start(), matcher.end()));
-						}
-
-						text = text.replaceAll(scan.getSize(), "");
-
-						scan.setBarCode(text.replaceAll(" +", ""));
-
-						products.add(scan);
-						productsString.add(scan.toString());
-
-						adapter = new MyRecyclerViewAdapter(MainActivity.this, productsString);
-						rvScanned.setAdapter(adapter);
-					}
+					Toast.makeText(MainActivity.this, "No text in image!", Toast.LENGTH_SHORT).show();
 				}
-			}).addOnFailureListener(new OnFailureListener()
-			{
-				@Override
-				public void onFailure(@NonNull Exception e)
+				else
 				{
-					Toast.makeText(MainActivity.this, "Error!" + e.getMessage(), Toast.LENGTH_SHORT).show();
+					StringBuilder text = new StringBuilder();
+					for(FirebaseVisionText.Block block : firebaseVisionText.getBlocks())
+					{
+						text.append(block.getText()).append(" ");
+					}
+
+					Scan scan = new Scan();
+
+					Pattern pattern = Pattern.compile("[JDZ][0-9A-Z]{5}");
+					Matcher matcher = pattern.matcher(text.toString());
+					if(matcher.find())
+					{
+						scan.setSKU(text.substring(matcher.start(), matcher.end()));
+					}
+
+					text = new StringBuilder(text.toString().replaceAll(scan.getSKU(), ""));
+
+					pattern = Pattern.compile("/");
+					matcher = pattern.matcher(text.toString());
+					if(matcher.find())
+					{
+						scan.setColorCode(text.substring(matcher.start() + 1, matcher.start() + 4));
+					}
+
+					text = new StringBuilder(text.toString().replaceAll("/" + scan.getColorCode(), ""));
+
+					pattern = Pattern.compile("[0-9]{1,2}[AYM]");
+					matcher = pattern.matcher(text.toString());
+					if(matcher.find())
+					{
+						scan.setSize(text.substring(matcher.start(), matcher.end()));
+					}
+
+					text = new StringBuilder(text.toString().replaceAll(scan.getSize(), ""));
+
+					scan.setBarCode(text.toString().replaceAll(" +", ""));
+
+					products.add(scan);
+					productsString.add(scan.toString());
+
+					adapter = new MyRecyclerViewAdapter(MainActivity.this, productsString);
+					rvScanned.setAdapter(adapter);
 				}
-			});
+			}).addOnFailureListener(e->Toast.makeText(MainActivity.this, "Error!" + e.getMessage(), Toast.LENGTH_SHORT).show());
 		}
 	}
 }
