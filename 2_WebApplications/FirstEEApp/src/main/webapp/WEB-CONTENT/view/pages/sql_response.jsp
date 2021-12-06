@@ -1,12 +1,7 @@
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %><%--
-  Created by IntelliJ IDEA.
-  User: IonescuRadu
-  Date: 28.11.2021
-  Time: 13:17
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%-- @author Ionescu Radu
+     @date 28.11.2021       --%>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="java.util.ArrayList" %>
 <html>
     <head>
         <title>SQL Response</title>
@@ -15,7 +10,7 @@
     <body>
         <div id="logo">
             <a href="home">
-                <img src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/logo.png" id="logo_image">
+                <img alt="LOGO" src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/logo.png" id="logo_image">
             </a>
         </div>
         <%

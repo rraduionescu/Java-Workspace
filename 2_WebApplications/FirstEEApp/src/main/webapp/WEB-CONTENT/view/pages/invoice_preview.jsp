@@ -1,28 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: IonescuRadu
-  Date: 29.11.2021
-  Time: 18:49
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%-- @author Ionescu Radu
+     @date 28.11.2021       --%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
     <head>
         <title>Invoice Preview</title>
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/WEB-CONTENT/view/styles/style.css"/>
-        <script>
-            document.getElementById('confirm').onclick = changeColor;
-            function changeColor()
-            {
-                document.getElementById('gif').style.display = "inline-block";
-                return false;
-            }
-        </script>
     </head>
     <body>
         <div id="logo">
             <a href="home">
-                <img src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/logo.png" id="logo_image">
+                <img alt="LOGO" src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/logo.png" id="logo_image">
             </a>
         </div>
         <h3>
@@ -32,8 +19,7 @@
             <form action="nir" method="get">
                 <embed src="${pageContext.request.contextPath}/WEB-CONTENT/invoices/<%=request.getAttribute("file")%>" width="800px" height="650px"/><br>
                 <input type="hidden" name="file" value="<%=request.getAttribute("file")%>" /><br>
-                <input type="submit" value="CONFIRM" class="wong" id="confirm"><br>
-                <img src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/loading.gif" id="gif" style="display: none">
+                <input type="submit" value="Confirm" class="wong" id="confirm">
             </form>
         </div>
     </body>

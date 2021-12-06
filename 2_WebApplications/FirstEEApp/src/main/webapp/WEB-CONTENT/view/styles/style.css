@@ -1,156 +1,127 @@
 body
 {
-    background-color: #80367d;
-    margin: 0;
+	background-color : #80367D;
+	margin           : 0;
 }
-h1
+h1, h3
 {
-    font-family: "Avenir Next", serif;
-    text-align: center;
-}
-h3
-{
-    font-family: "Avenir Next", serif;
-    text-align: center;
+	font-family : "Avenir Next", serif;
+	text-align  : center;
 }
 p
 {
-    text-align: center;
+	text-align : center;
 }
 label
 {
-    text-align: center;
-    vertical-align: center;
-    display: flex;
-    align-items: center;
+	line-height : 50px;
 }
 textarea
 {
-    background-color: black;
-    color: aqua;
-}
-input
-{
-    text-align: center;
+	background-color : black;
+	color            : aqua;
 }
 #sql_form
 {
-    margin-top: 100px;
-    display: block;
+	margin-top : 100px;
+	display    : block;
 }
 #sql_div
 {
-    text-align: center;
+	text-align : center;
 }
 #sql_back_Button
 {
-    text-align: center;
+	text-align : center;
 }
 #logo
 {
-    background-color: white;
-    margin: 0;
-    text-align: center;
-    alignment: center;
+	background-color : white;
+	margin           : 0;
+	text-align       : center;
+	alignment        : center;
 }
 #logo_image
 {
-    width: 84px;
-    height: 60px;
-    margin: 0;
-}
-#lr_buttons
-{
-    padding-top: 10%;
-    text-align: center;
-    alignment: center;
+	width  : 84px;
+	height : 60px;
+	margin : 0;
 }
 .wong
 {
-    display: inline-block;
-    font-family: "Avenir Next", serif;
-    margin: 5px;
-    border: none;
-    background-color: #2a2a28;
-    color: white;
-    font-size: 15px;
-    width: 300px;
-    height: 50px;
-    text-align: center;
-    align-content: center;
-    alignment: center;
-    vertical-align: center;
+	display          : inline-block;
+	font-family      : "Avenir Next", serif;
+	font-size        : 15px;
+	margin           : 5px;
+	border           : none;
+	background-color : #2A2A28;
+	color            : white;
+	width            : 300px;
+	height           : 50px;
+	text-align       : center;
+	align-content    : center;
 }
 .wong:hover
 {
-    margin: 5px;
-    border: none;
-    background-color: #3a243a;
-    color: white;
-    font-size: 15px;
-    width: 300px;
-    height: 50px;
-    text-align: center;
-    align-content: center;
-    alignment: center;
-    vertical-align: center;
+	margin           : 5px;
+	border           : none;
+	background-color : #3A243A;
+	color            : white;
+	font-size        : 15px;
+	width            : 300px;
+	height           : 50px;
+	text-align       : center;
+	align-content    : center;
 }
 .wong:focus
 {
-    margin: 5px;
-    border: none;
-    background-color: #2c1b2c;
-    color: white;
-    font-size: 15px;
-    width: 300px;
-    height: 50px;
-    text-align: center;
-    align-content: center;
-    alignment: center;
-    vertical-align: center;
+	margin           : 5px;
+	border           : none;
+	background-color : #2C1B2C;
+	color            : white;
+	font-size        : 15px;
+	width            : 300px;
+	height           : 50px;
+	text-align       : center;
+	align-content    : center;
 }
-.lform, .rform, .pdform
+.login_form, .registration_form, .pdf_upload_form, #lr_buttons
 {
-    padding-top: 10%;
-    alignment: center;
-    text-align: center;
+	padding-top : 10%;
+	text-align  : center;
 }
 #nir_table
 {
-    alignment: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 85%;
-    background-color: #d7afd7;
-    margin-left: auto;
-    margin-right: auto;
+	alignment        : center;
+	font-family      : Arial, Helvetica, sans-serif;
+	border-collapse  : collapse;
+	width            : 85%;
+	background-color : #D7AFD7;
+	margin-left      : auto;
+	margin-right     : auto;
 }
-
 #nir_table td, #nir_table th
 {
-    border: 1px solid #3a243a;
-    padding-top: 4px;
+	border      : 1px solid #3A243A;
+	padding-top : 4px;
 }
-
 #nir_table tr:nth-child(even)
 {
-    background-color: #a182a1;
+	background-color : #A182A1;
 }
-
 #nir_table tr:hover
 {
-    background-color: #7c607c;
+	background-color : #7C607C;
 }
-
 #nir_table th
 {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    text-align: center;
-    color: white;
-    background-color: #3a243a;
+	padding-top      : 8px;
+	padding-bottom   : 8px;
+	text-align       : center;
+	color            : white;
+	background-color : #3A243A;
 }
 #in_up
 {
-    display: none;
+	display : none;
 }

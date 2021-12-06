@@ -1,10 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: IonescuRadu
-  Date: 29.11.2021
-  Time: 19:42
-  To change this template use File | Settings | File Templates.
---%>
+<%-- @author Ionescu Radu
+     @date 28.11.2021       --%>
 <%@ page import="com.ionescu.radu.firsteeapp.model.classes.NBRRates" %>
 <%@ page import="com.ionescu.radu.firsteeapp.model.classes.Product" %>
 <%@ page contentType="text/html;charset=UTF-8" %>

@@ -1,11 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: IonescuRadu
-  Date: 28.11.2021
-  Time: 19:01
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%-- @author Ionescu Radu
+     @date 28.11.2021       --%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,10 +10,10 @@
     <body>
         <div id="logo">
             <a href="home">
-                <img src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/logo.png" id="logo_image">
+                <img alt="LOGO" src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/logo.png" id="logo_image">
             </a>
         </div>
-        <div class="rform">
+        <div class="registration_form">
             <form action="register" method="post" style="display: inline-block">
                 <input name="r_fn" type="text" class="wong" placeholder="First Name"><br>
                 <input name="r_ln" type="text" class="wong" placeholder="Last Name"><br>

@@ -1,10 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: IonescuRadu
-  Date: 28.11.2021
-  Time: 19:01
-  To change this template use File | Settings | File Templates.
---%>
+<%-- @author Ionescu Radu
+     @date 28.11.2021       --%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -15,7 +10,7 @@
     <body>
         <div id="logo">
             <a href="home">
-                <img src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/logo.png" id="logo_image">
+                <img alt="LOGO" src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/logo.png" id="logo_image">
             </a>
         </div>
         <h1>

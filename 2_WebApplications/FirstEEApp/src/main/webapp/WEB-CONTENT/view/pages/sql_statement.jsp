@@ -1,21 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: IonescuRadu
-  Date: 28.11.2021
-  Time: 13:08
-  To change this template use File | Settings | File Templates.
---%>
-<%--
-CREATE TABLE user
-(
-id BIGINT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-email VARCHAR(40) NOT NULL,
-password VARCHAR(50) NOT NULL,
-first_name VARCHAR(20) NOT NULL,
-last_name VARCHAR(20) NOT NULL
-);
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%-- @author Ionescu Radu
+     @date 28.11.2021       --%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
     <head>
         <title>SQL Statement</title>
@@ -24,7 +9,7 @@ last_name VARCHAR(20) NOT NULL
     <body>
         <div id="logo">
             <a href="home">
-                <img src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/logo.png" id="logo_image">
+                <img alt="LOGO" src="${pageContext.request.contextPath}/WEB-CONTENT/view/images/logo.png" id="logo_image">
             </a>
         </div>
         <div id="sql_div">
@@ -36,3 +21,13 @@ last_name VARCHAR(20) NOT NULL
         </div>
     </body>
 </html>
+<%--
+CREATE TABLE user
+(
+id BIGINT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+email VARCHAR(40) NOT NULL,
+password VARCHAR(50) NOT NULL,
+first_name VARCHAR(20) NOT NULL,
+last_name VARCHAR(20) NOT NULL
+);
+--%>
