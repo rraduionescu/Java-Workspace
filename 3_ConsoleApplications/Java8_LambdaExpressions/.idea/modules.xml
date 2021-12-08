@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Java8_Interface.iml" filepath="$PROJECT_DIR$/Java8_Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java8_LambdaExpressions.iml" filepath="$PROJECT_DIR$/Java8_LambdaExpressions.iml" />
     </modules>
   </component>
 </project>
